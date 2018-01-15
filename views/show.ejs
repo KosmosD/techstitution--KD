@@ -1,0 +1,55 @@
+<% include partials/header %>
+<% include partials/navbar %>
+
+
+
+<!-- <%= docs %> -->
+
+<div id="map"></div>
+
+<table class="table table-hover" id="tblShow">
+    <thead>
+
+        <tr>
+            <th>Pika Kufitare</th>
+            <th>Hyrje min minuta</th>
+            <th>Hyrje max minuta</th>
+            <th>Dalje min minuta</th>
+            <th>Dalje max minuta</th>
+            <th>Hyrje min metra</th>
+            <th>Hyrje max metra</th>
+            <th>Dalje min metra</th>
+            <th>Dalje max metra</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+            <% for(var i=0; i < docs.length; i++) { %>
+                <tr>
+                    <td ><%= docs[i].sel_pk_kufitare %> </td>
+                    <td style="text-align:center;"><%= docs[i].min_hyrje_mins %> <span style=" float:right; margin-left:-15%; margin-right:15%; color: <%= indicator[i] %>;">&#x2588;</span> </td>
+                    <td style="text-align:center;"><%= docs[i].max_hyrje_mins %></td>
+                    <td style="text-align:center;"><%= docs[i].min_dalje_mins %>  <span style=" float:right; margin-left:-15%; margin-right:15%; color: <%= indicator_dalje[i] %>;">&#x2588;</span></td>
+                    <td style="text-align:center;"><%= docs[i].max_dalje_mins %></td>
+                    <td style="text-align:center;"><%= docs[i].min_hyrje_meter %></td>
+                    <td style="text-align:center;"><%= docs[i].max_hyrje_meter %></td>
+                    <td style="text-align:center;"><%= docs[i].min_dalje_meter %></td>
+                    <td style="text-align:center;"><%= docs[i].max_dalje_meter %></td>
+                    <td> <a href="/edit/<%= docs[i]._id %>" >EDIT</a></td>
+                    <td><a href="/delete/<%= docs[i]._id %>" >DELETE</a></td>
+                </tr>
+                   <% }; %>
+
+
+    </tbody>
+</table>
+
+
+
+
+
+
+<% include partials/footer %>

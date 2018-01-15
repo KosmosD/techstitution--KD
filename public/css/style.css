@@ -1,0 +1,36 @@
+
+.frm1 {
+  background: linear-gradient(135deg, rgba(30,87,153,0) 0%,
+    rgba(30,87,153,0.8) 15%,
+    rgba(30,87,153,1) 19%,
+    rgba(30,87,153,1) 20%,
+    rgba(41,137,216,1) 50%,
+    rgba(30,87,153,1) 80%,
+    rgba(30,87,153,1) 81%,
+    rgba(30,87,153,0.8) 85%,
+    rgba(30,87,153,0) 100%);
+
+}
+
+.lbl-white {
+  color:white;
+}
+
+
+.frm1 label {
+  color:white;
+}
+
+.frm1 input{
+  text-align: center;
+}
+
+
+
+}
+
+
+ td {text-align: center; font-weight: bold;}
+
+ th {background-color: grey; color: white;}
+/* td:nth-child(even){border-right: 1px dashed grey; border-left: 1px dashed grey;} */

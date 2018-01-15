@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> FORMA  </title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<scrip src="css/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid col-xs-12  col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 ">
+        <h2>Forma e regjistrimit te pikave kufitare</h2>
+        <form class="form-horizontal" action="" style="background-color:rgb(103, 116, 111); border:5px solid rgb(141, 109, 109);">
+          <div class="form-group">
+              <h3 class="col-sm-offset-1 col-sm-11" style="color:rgb(0, 0, 0);">
+                  1 ---------------------------------------------</h3>
+            <label class="control-label col-sm-3" for="sel_pk_kufitare">Pika Kufitare:</label>
+            <div class="col-sm-4">
+                    <select class="form-control" id="sel_pk_kufitare">
+                            <option selected id="defaul">Zgjedh piken kufitare...</option>
+                            <option id="Morine">Morine</option>
+                            <option id="Merdare">Merdare</option>
+                            <option id="Dheu_bardhe">Dheu i bardhe</option>
+                            <option id="Jarinje">Jarinje</option>
+
+                          </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+                <h3 class="col-sm-offset-1 col-sm-11" style="color:rgb(0, 0, 0);">
+                        2 ---------------------------------------------</h3>
+            <h4 class="col-sm-offset-1 col-sm-12" style="color:white">Hyrje</h4>
+    
+            <label class="control-label col-sm-2 col-sm-offset-1" for="min_hyrje_mins"> Minimum</label>
+            <div class="col-sm-3">          
+                 <input type="number"  class="form-control" id="min_hyrje_mins">
+            
+            </div>
+            <label class="control-label col-sm-offset-0">minuta</label>
+          </div>
+
+            <div class="form-group">
+    
+                <label class="control-label col-sm-2 col-sm-offset-1" for="max_hyrje_mins"> Maximum</label>
+               <div class="col-sm-3">          
+                      <input type="number"  class="form-control" id="max_hyrje_mins">
+            
+            </div>
+            <label class="control-label col-sm-offset-0">minuta</label>
+          </div>
+
+          <div class="form-group">
+            <h4 class="col-sm-offset-1 col-sm-12" style="color:white">Dalje</h4>
+    
+            <label class="control-label col-sm-2 col-sm-offset-1" for="min_dalje_mins"> Minimum</label>
+            <div class="col-sm-3">          
+            <input type="number"  class="form-control" id="min_dalje_mins">
+            
+            </div>
+            <label class="control-label col-sm-offset-0">minuta</label>
+          </div>
+
+
+
+
+          <div class="form-group">
+                
+                        <label class="control-label col-sm-2 col-sm-offset-1" for="max_dalje_mins"> Maximum</label>
+                        <div class="col-sm-3">          
+                        <input type="text"  class="form-control" id="max_dalje_mins">
+                        
+                        </div>
+                        <label class="control-label col-sm-offset-0">minuta</label>
+                      </div>
+
+
+          <div class="form-group">
+                <h3 class="col-sm-offset-1 col-sm-11" style="color:rgb(0, 0, 0);">
+                        3 ---------------------------------------------</h3>
+            <h4 class="col-sm-offset-1 col-sm-12" style="color:white">Hyrje</h4>
+    
+            <label class="control-label col-sm-2 col-sm-offset-1" for="min_hyrje_meter"> Minimum</label>
+            <div class="col-sm-3">          
+            <input type="text"  class="form-control" id="min_hyrje_meter">
+            
+            </div>
+            <label class="control-label col-sm-offset-0">metra</label>
+          </div>
+
+          <div class="form-group">
+    
+            <label class="control-label col-sm-2 col-sm-offset-1" for="max_hyrje_meter"> Maximum</label>
+            <div class="col-sm-3">          
+            <input type="text"  class="form-control" id="max_hyrje_meter">
+            
+            </div>
+            <label class="control-label col-sm-offset-0">metra</label>
+          </div>
+
+          <div class="form-group">
+                <h4 class="col-sm-offset-1 col-sm-12" style="color:white">Dalje</h4>
+        
+                <label class="control-label col-sm-2 col-sm-offset-1" for="min_dalje_meter"> Minimum</label>
+                <div class="col-sm-3">          
+                <input type="text"  class="form-control" id="min_dalje_meter">
+                
+                </div>
+                <label class="control-label col-sm-offset-0">metra</label>
+              </div>
+    
+    
+    
+    
+              <div class="form-group">
+                    
+                            <label class="control-label col-sm-2 col-sm-offset-1" for="max_dalje_meter"> Maximum</label>
+                            <div class="col-sm-3">          
+                            <input type="text"  class="form-control" id="max_dalje_meter">
+                            
+                            </div>
+                            <label class="control-label col-sm-offset-0">metra</label>
+                          </div>
+
+
+
+
+          
+          <div class="form-group">        
+            <div class="col-sm-offset-3 col-sm-12">
+              <button type="submit" class="btn btn-primary" id="btn_dergo">Dergo</button>
+              <button type="submit" class="btn btn-primary" id="btn_fshij">Fshij</button>
+                  </div>
+          </div>
+        </form>
+      </div>
+
+	
+
+ 
+</body>
+</html>

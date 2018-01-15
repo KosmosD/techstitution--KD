@@ -1,0 +1,171 @@
+<!-- include header -->
+<html>
+<head>
+<title> EDITIMI  </title>
+
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		 <script src="../../js/jquery-3.2.1.min.js"></script>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <scrip src="../../css/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+
+
+<div class="container-fluid col-xs-12  col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 ">
+
+		        <div class="panel panel-primary">
+
+			           <div class="panel-heading">
+
+					              <h3 class="panel-title" style="text-align:center; text-transform:uppercase;">Forma për editimin e të dhënave</h3>
+                        <% include partials/nav_v3%>
+			           </div>
+
+			<div class="panel-body">
+
+        <form class="form-horizontal  frm1 col-xs-12  col-sm-12 container-fluid "   method="POST" action="/update/<%= doc._id %>" style="background-color:#4A96AD;">
+          <div class="form-group">
+                <h3 class=" col-sm-offset-1 col-sm-11" style="color:white;">
+                    1   <hr style="color:white; height:1px; border: 1px solid white; background-color:white; margin-left:5%; margin-right:20%;"></hr></h3>
+                      <label class="control-label col-xs-2 col-sm-3 " for="sel_pk_kufitare">Pika Kufitare:</label>
+                    <div class="col-sm-4 col-xs-12" >
+                    <select class="form-control" id="sel_pk_kufitare" >
+                            <option id="default" value="<%= doc.sel_pk_kufitare %>"><%= doc.sel_pk_kufitare %></option>
+                            <option id="Qafë e Morinës" value="Qafë e Morinës">Qafë e Morinës</option>
+                            <option id="Merdare" value="Merdare">Merdare</option>
+                            <option id="Dheu_bardhe" value="Dheu i bardhe">Dheu i bardhe</option>
+                            <option id="Jarinje" value="Jarinje">Jarinje</option>
+                            <option id="Kullë" value="Kullë">Kullë</option>
+                            <option id="Vërmicë" value="Vërmicë">Vërmicë</option>
+                            <option id="Qafë e Prushit" value="Qafë e Prushit">Qafë e Prushit</option>
+                            <option id="Bërnjak" value="Bërnjak">Bërnjak</option>
+                            <option id="Mutivodë" value="Mutivodë">Mutivodë</option>
+                            <option id="Muçibabë" value="Muçibabë">Muçibabë</option>
+                            <option id="Hani i Elezit" value="Hani i Elezit">Hani i Elezit</option>
+                            <option id="Glloboqicë" value="Glloboqicë">Glloboqicë</option>
+
+                          </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <h3 class="col-sm-offset-1 col-sm-11 col-xs-12" style="color:white;">
+              2 <hr style="color:white; height:1px; border: 1px solid white; background-color:white; margin-left:5%; margin-right:20%;"></hr></h3>
+
+                <h4 class="col-sm-offset-1 col-sm-12" style="color:white">Hyrje</h4>
+
+                  <label class="control-label col-sm-2 col-sm-offset-1 col-xs-offset-4" for="min_hyrje_mins"> Minimum</label>
+            <div class="col-sm-3">
+                 <input type="number"  class="form-control" id="min_hyrje_mins" value="<%= doc.min_hyrje_mins %>" name="min_hyrje_mins" >
+
+            </div>
+            <label class="control-label col-sm-offset-0 col-xs-offset-5">minuta</label>
+          </div>
+
+            <div class="form-group">
+
+                <label class="control-label col-sm-2 col-sm-offset-1 col-xs-offset-4" for="max_hyrje_mins"> Maximum</label>
+               <div class="col-sm-3">
+                      <input type="number"  class="form-control" id="max_hyrje_mins" value="<%= doc.max_hyrje_mins %>">
+
+            </div>
+            <label class="control-label col-sm-offset-0 col-xs-offset-5">minuta</label>
+          </div>
+
+          <div class="form-group">
+            <h4 class="col-sm-offset-1 col-sm-12" style="color:white">Dalje</h4>
+
+            <label class="control-label col-sm-2 col-sm-offset-1 col-xs-offset-4" for="min_dalje_mins"> Minimum</label>
+            <div class="col-sm-3">
+            <input type="number"  class="form-control" id="min_dalje_mins" value="<%= doc.min_dalje_mins %>">
+
+            </div>
+            <label class="control-label col-sm-offset-0 col-xs-offset-5">minuta</label>
+          </div>
+
+
+
+
+          <div class="form-group">
+
+                        <label class="control-label col-sm-2 col-sm-offset-1 col-xs-offset-4" for="max_dalje_mins"> Maximum</label>
+                        <div class="col-sm-3">
+                        <input type="number"  class="form-control" id="max_dalje_mins" value="<%= doc.max_dalje_mins %>">
+
+                        </div>
+                        <label class="control-label col-sm-offset-0 col-xs-offset-5">minuta</label>
+                      </div>
+
+
+           <div class="form-group">
+          				<h3 class="col-sm-offset-1 col-sm-11" style="color:white;">
+          								3 <hr style="color:white; height:1px; border: 1px solid white; background-color:white; margin-left:5%; margin-right:20%;"></hr></h3>
+          		<h4 class="col-sm-offset-1 col-sm-12" style="color:white">Hyrje</h4>
+
+            <label class="control-label col-sm-2 col-sm-offset-1 col-xs-offset-4" for="min_hyrje_meter"> Minimum</label>
+            <div class="col-sm-3">
+            <input type="number"  class="form-control" id="min_hyrje_meter" value="<%= doc.min_hyrje_meter %>">
+
+            </div>
+            <label class="control-label col-sm-offset-0 col-xs-offset-5">metra</label>
+          </div>
+
+          <div class="form-group">
+
+            <label class="control-label col-sm-2 col-sm-offset-1 col-xs-offset-4" for="max_hyrje_meter"> Maximum</label>
+            <div class="col-sm-3">
+            <input type="number"  class="form-control" id="max_hyrje_meter" value="<%= doc.max_hyrje_meter %>">
+
+            </div>
+            <label class="control-label col-sm-offset-0 col-xs-offset-5">metra</label>
+          </div>
+
+          <div class="form-group">
+                <h4 class="col-sm-offset-1 col-sm-12" style="color:white">Dalje</h4>
+
+                <label class="control-label col-sm-2 col-sm-offset-1 col-xs-offset-4" for="min_dalje_meter"> Minimum</label>
+                <div class="col-sm-3">
+                <input type="number"  class="form-control" id="min_dalje_meter" value="<%= doc.min_dalje_meter %>">
+
+                </div>
+                <label class="control-label col-sm-offset-0 col-xs-offset-5">metra</label>
+              </div>
+
+
+
+
+              <div class="form-group">
+
+                            <label class="control-label col-sm-2 col-sm-offset-1 col-xs-offset-4" for="max_dalje_meter"> Maximum</label>
+                            <div class="col-sm-3">
+                            <input type="number"  class="form-control" id="max_dalje_meter" value="<%= doc.max_dalje_meter %>">
+
+                            </div>
+                            <label class="control-label col-sm-offset-0 col-xs-offset-5">metra</label>
+                          </div>
+
+
+
+
+
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-12 col-xs-12 col-xs-offset-3">
+              <button type="submit" class="btn btn-success" id="btn_dergo">Dergo</button>
+              <button type="button" class="btn btn-success" id="btn_fshij">Fshij</button>
+                  </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<% include partials/footer %>
+
+<!-- include
